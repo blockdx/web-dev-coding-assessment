@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task 2</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="tablesorter/jquery.tablesorter.js"></script>
+        <link rel="stylesheet" href="tablesorter/themes/blue/style.css">
+        <script src="Task2.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <style>
+            .container {
+                text-align: center;
+                margin-top: 50px;
+                width: 300px;
+            }
+
+            input {
+                margin-left: 10px;
+                margin-bottom: 15px;
+            }
+            label {
+                width: 100px;
+            }
+            th {
+                width: 100px;
+            }
+            p {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="container col-lg-4">
+                    <form id="data">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name"/><br>
+                        
+                        <label for="color">Favorite Color</label>
+                        <input type="text" name="color" id="color"/><br>
+                        
+                        <label for="pet">Favorite Pet</label>
+                        <input type="text" name="pet" id="pet"/><br>
+                        
+                        <label for="birthday">Birthday</label>
+                        <input type="date" name="birthday" id="birthday"/><br>
+                        
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$"/><br>
+                        
+                        <label for="phone">Phone</label>
+                        <input type="text" name="phone" id="phone" pattern="^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}$"/><br>
+                        
+                        <p id="invalidMsg"></p>
+                        
+                        <input type="button" class="btn btn-primary" value="Submit" onclick="addData()"/>
+                    </form>
+                </div>
+            
+                <div class="container col-lg-6">
+                    <table class="tablesorter" id="results">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Color</th>
+                                <th>Favorite Pet</th>
+                                <th>Birthday</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
