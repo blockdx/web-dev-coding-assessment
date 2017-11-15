@@ -35,7 +35,7 @@
         {
             //create header
             $header = '<h2>'.$months[$month-1].' '.$year.'</h2>';
-            $calendar.= '<div class="container col-xs-6 col-centered"> <table class="table table-bordered">';
+            $calendar.= '<div class="row"><div class="container col-xs-6 col-centered"> <table class="table table-bordered">';
             
         	// write calendar table headings 
         	$headings = array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
@@ -103,7 +103,7 @@
         	$calendar.= '</tr>';
     
         	// end table tags
-        	$calendar.= '</table> </div>';
+        	$calendar.= '</table> </div> </div>';
         }
         // end tags and return
         $calendar.= '</body>
